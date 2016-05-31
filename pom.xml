@@ -7,6 +7,11 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
+    <properties>
+        <apache.cxf.version>3.1.6</apache.cxf.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -97,12 +102,17 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxws</artifactId>
-            <version>3.0.0-milestone2</version>
+            <version>${apache.cxf.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-transports-http</artifactId>
-            <version>3.0.0-milestone2</version>
+            <version>${apache.cxf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf.services.wsn</groupId>
+            <artifactId>cxf-services-wsn-core</artifactId>
+            <version>${apache.cxf.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
